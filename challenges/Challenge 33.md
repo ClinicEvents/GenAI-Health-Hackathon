@@ -136,8 +136,18 @@ Below are details of the most relevant aspects of the tools available to partici
 
 ### Database
 
-**REVISAR EL BUCKET**
+The documents are classified into 2 groups:
 
+1. Studies:
+   - Retrospective studies
+   - Studies with medical devices (PS)
+   - Observational studies with medicines (EOM)
+   - Research projects
+3. Clarification:
+
+The document name indicates the type of study. All files contain a number HCBXXXXX.Y, the part HCBXXXX is used to link clarifications with the study that must match, whereas .Y refers to whether it corresponds to the first version of the file (.1 or .h1) or once the clarifications have been made (.2 or .h2), for example HCB20240123.2: the number that relates them is HCB20240123 and indicates that it is after the clarifications.
+
+NOTE: If a study only has .2 or .h2, this means that it has no clarifications.
 
 
 ### Shared bucket
@@ -184,7 +194,6 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 | Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
 | Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
 | Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
-
 
 
 
