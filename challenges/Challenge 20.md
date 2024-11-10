@@ -1,10 +1,16 @@
-# Challenge 24: Differential diagnostic optimization and mental illness symptoms identification using AI with text data
+# Challenge 20: Optimizing Clinical Research Using Artificial Intelligence for Extracting and Analyzing Stroke Patient Data
 
-This challenge aims to improve the efficiency and precision of differential diagnostics using clinical text data. Using specific examples, it allows to adjust the diagnostics process in sequential steps, quickly integrate different sources data and analyse them in a flexible way and provide a detailed context to improve the precision and reliability of the AI proposed diagnostics, as well as optimizing the clinical trial selection and the treatment recommendation.
+
+The main objective of this challenge is to automate the extraction of specific data from medical reports, medical notes, and complementary studies for patients who have experienced a stroke in 2023. These extracted data will be integrated and compared with an existing database (CICAT-Stroke Code Database) containing multiple variables related to the clinical characteristics of the patients. The goal is to enhance the precision and efficiency of collecting relevant clinical data for research and analyzing treatments, risk factors, and neurological outcomes of stroke patients.
+
+This challenge is scalable to any disease and/or specialty. The target population includes patients diagnosed with stroke who have been assessed through the Stroke Code Circuit, covering a range of ages, genders, and medical histories, with a focus on those who have received specific treatments. The project is expected to significantly improve the efficiency and accuracy of clinical data collection and analysis, facilitating research and clinical studies for ischemic stroke patients.
+
+
 
 ## Objective
 
-To develop an AI model that is able to identify specific diagnostics like bipolar disorder, schizophrenia, depressive disorder, among others., and transdiagnostic symptoms like imsomnia, irritability, or anxyety, from clinical course texts and clinical histories written by health professionals.
+Use artificial intelligence to automate the extraction of specific data from medical reports, medical notes, and complementary studies for stroke patients from 2023.
+
 
 ## Expected Outcomes
 To be agreed with the mentor.
@@ -19,7 +25,7 @@ Participants will have the following information/tools to complete the challenge
 - Develop:
     - Jupyter Notebook
     - Bedrock
-    - Bucket shared
+    - Shared bucket 
 
 - Guides. It is recommended to consult the following demos:
     - DEMO_bedrock_connection
@@ -36,24 +42,23 @@ Below are details of the most relevant aspects of the tools available to partici
 
 ### Database
  
-
 The databases that make up this challenge are:
-- BASE24. Contains:
-	- DAT24_01: Free text document: Discharge report
-	- DAT24_02: Free text document: Emergency discharge report
-	- DAT24_03: Free text document: Evolution report
-	- DAT24_04: Free text document: Neuropsychologycal report, psychometry
-	- DAT24_05: Free text document: TEC report
-	- DAT24_06: Free text document: Neuropicture
-	- DAT24_07: Lab data (LAB)
-	- DAT24_08: Demographic data (DEMO)
-	- DAT24_09: Socioeconomic data (SOCIOECONOMICOS)
+BASE19. Contains:
+  	-	DAT19_01: Free text document: Emergency discharge report
+ 	 -	DAT19_02: Free text document: Hospital admission report
+ 	 -	DAT19_03: Free text document: Transport
+ 	 -	DAT19_04: Free text document: Cranial CT
+	  - DAT19_05: Clinical course
+ 	 - DAT19_06: Free text document: Discharge report
+ 	 - DAT19_07: Lab data (LAB)
+ 	 - DAT19_08: Demographic data (DEMO)
+ 	 - DAT19_09: Socioeconomic data (SOCIOECONOMICOS)
+
 
 
 #### Summary of the tables
 
 A. DEMO
-
 | Name      | Description |
 | ----------- | ----------- |
 | Sex      | Patient's sex, 1 for male, 2 for female, 3 for other      |
@@ -68,7 +73,6 @@ A. DEMO
 | id_patient_pseu      | Patient identification number that links the patients between tables      |
 
 B. SOCIECONOMICOS
-
 | Name      | Description |
 | ----------- | ----------- |
 | register_date      | Register date     |
@@ -79,7 +83,6 @@ B. SOCIECONOMICOS
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
 
 C. LABORATORIO:
-
 | Name      | Description |
 | ----------- | ----------- |
 | ou_med      | Medical unit that performas the extraction    |
@@ -94,7 +97,9 @@ C. LABORATORIO:
 | id_epis_pseu      | Episode identification number  |
 
 
-C. FREE TEXT DOCUMENTS
+
+D. FREE TEXT DOCUMENTS
+
 
 The types of reports that we may encounter are:
 | Name      | Description |
@@ -113,7 +118,7 @@ The types of reports that we may encounter are:
 
 In the free-text reports the file name is always structured as follows:
 
-{challenge_number }_{challenge_identifier_number} _{report_type } _{id_patient_pseu} _{creation_date} _{counter}.txt
+{challenge_number}_{challenge_identifier_number}_{report_type}_{id_patient_pseu}_{creation_date}_{counter}.txt
 
 For example:
 01_02_INF_VAL_INI_407789453_20211119_29.txt
@@ -124,6 +129,11 @@ For example:
 -	Creation date (YYYYMMDD): 20211119
 -	Counter: 29
 
+
+
+
+
+	
 
 ### Shared bucket
 
@@ -161,15 +171,13 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 
 ```
 
-## Evaluation metrics
 
-| Criterion      | Excellent | Adequate | Needs Improvement | Poor |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| Clinical Accuracy      | All information is accurate and clinically relevant.     | Most information is accurate, with minor omissions.     | Several inaccuracies affecting interpretation.     | Incorrect or confusing information, compromising utility. |
-| Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
-| Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
-| Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
+### Evaluation Metrics
 
+To assess and validate the effectiveness of the data extraction and analysis process, the following metrics will be used:
 
-
-
+-	**Extraction accuracy**: measuring the precision with which AI extracts specific variables from medical reports compared to a reference manual extraction.
+-	**Data consistency**: assessing the consistency between the extracted data and the existing database to ensure variables match in terms of definition and format.
+-	**Processing time**: measuring the time required to extract and process data compared to traditional manual methods.
+-	**Data coverage**: evaluating the proportion of medical reports from which complete and relevant information was successfully extracted.
+-	**Impact on clinical research**: analyzing the impact of the extracted data on the quality and depth of clinical analysis, including identifying new patterns or trends in the treatment and outcomes of ischemic stroke patients.

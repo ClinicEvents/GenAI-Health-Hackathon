@@ -1,10 +1,11 @@
-# Challenge 24: Differential diagnostic optimization and mental illness symptoms identification using AI with text data
+# Challenge 03: PAIN Education
 
-This challenge aims to improve the efficiency and precision of differential diagnostics using clinical text data. Using specific examples, it allows to adjust the diagnostics process in sequential steps, quickly integrate different sources data and analyse them in a flexible way and provide a detailed context to improve the precision and reliability of the AI proposed diagnostics, as well as optimizing the clinical trial selection and the treatment recommendation.
+
+This challenge focuses on integrating documents generated in the first challenge (Pain Clinical History) with a reference document (ACPA – Stanford Resource Guide To Chronic Pain Management) to create a chatbot that provides patient education on their condition. Education is a key aspect of chronic pain management, and this system will provide patients with personalized and relevant information.
 
 ## Objective
 
-To develop an AI model that is able to identify specific diagnostics like bipolar disorder, schizophrenia, depressive disorder, among others., and transdiagnostic symptoms like imsomnia, irritability, or anxyety, from clinical course texts and clinical histories written by health professionals.
+Create a chatbot that educates patients on their condition.
 
 ## Expected Outcomes
 To be agreed with the mentor.
@@ -19,7 +20,7 @@ Participants will have the following information/tools to complete the challenge
 - Develop:
     - Jupyter Notebook
     - Bedrock
-    - Bucket shared
+    - Shared bucket 
 
 - Guides. It is recommended to consult the following demos:
     - DEMO_bedrock_connection
@@ -29,25 +30,18 @@ Participants will have the following information/tools to complete the challenge
     - DEMO_s3_read_file
     - DEMO_s3_write_file
 
-
 **All development must be carried out using the services available on AWS. Moving information outside of the specified tools is NOT allowed.**
 
 Below are details of the most relevant aspects of the tools available to participants.
 
 ### Database
  
-
 The databases that make up this challenge are:
-- BASE24. Contains:
-	- DAT24_01: Free text document: Discharge report
-	- DAT24_02: Free text document: Emergency discharge report
-	- DAT24_03: Free text document: Evolution report
-	- DAT24_04: Free text document: Neuropsychologycal report, psychometry
-	- DAT24_05: Free text document: TEC report
-	- DAT24_06: Free text document: Neuropicture
-	- DAT24_07: Lab data (LAB)
-	- DAT24_08: Demographic data (DEMO)
-	- DAT24_09: Socioeconomic data (SOCIOECONOMICOS)
+-  BASE01. Contains:
+	- DAT01_01: Free text document: Initial valuation
+	- DAT01_02: Free text document: Evolution
+	- DAT01_03: Demographic data (DEMO)
+	- DAT01_04: Socioeconomic data (SOCIOECONOMICOS)
 
 
 #### Summary of the tables
@@ -68,7 +62,6 @@ A. DEMO
 | id_patient_pseu      | Patient identification number that links the patients between tables      |
 
 B. SOCIECONOMICOS
-
 | Name      | Description |
 | ----------- | ----------- |
 | register_date      | Register date     |
@@ -78,23 +71,7 @@ B. SOCIECONOMICOS
 | cuida_nomb      | Name of the care giver       |
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
 
-C. LABORATORIO:
-
-| Name      | Description |
-| ----------- | ----------- |
-| ou_med      | Medical unit that performas the extraction    |
-| extrac_date      | Extraction date   |
-| extrac_time      | Extraction time    |
-| lab_ref      | Lab reference   |
-| lab_desc      | Reference description  |
-| result      | Result    |
-| units      | Result units    |
-| rang      | Normal value range   |
-| id_patient_pseu      | Patient identification number that links the patients between tables    |
-| id_epis_pseu      | Episode identification number  |
-
-
-C. FREE TEXT DOCUMENTS
+C. Free text documents
 
 The types of reports that we may encounter are:
 | Name      | Description |
@@ -113,7 +90,7 @@ The types of reports that we may encounter are:
 
 In the free-text reports the file name is always structured as follows:
 
-{challenge_number }_{challenge_identifier_number} _{report_type } _{id_patient_pseu} _{creation_date} _{counter}.txt
+{challenge_number} _{challenge_identifier_number} _{report_type} _{id_patient_pseu} _{creation_date} _{counter}.txt
 
 For example:
 01_02_INF_VAL_INI_407789453_20211119_29.txt
@@ -158,18 +135,18 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 # - replace <group_name> by the name of your team (e.g. Team1)
 # - replace <challenge_name>  by the name of the challenge (e.g. Challenge1)
 # - replace <file_name> by the name of the file that you want to store (e.g., main_code_challenge1.ipynb)
-
 ```
+### Evaluation Metrics
 
-## Evaluation metrics
-
-| Criterion      | Excellent | Adequate | Needs Improvement | Poor |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| Clinical Accuracy      | All information is accurate and clinically relevant.     | Most information is accurate, with minor omissions.     | Several inaccuracies affecting interpretation.     | Incorrect or confusing information, compromising utility. |
-| Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
-| Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
-| Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
-
-
+To evaluate the effectiveness of the educational system generated for the chatbot, the following metrics will be used: 
+- precision and recall to measure reliability and the system’s ability to identify and provide all relevant information
+- accuracy and F1-score to assess the overall precision and completeness of the information provided
+- coherence and clarity to measure the fluency and comprehensibility of responses
+- response speed to assess the chatbot's response time
+- user satisfaction to gather feedback on the chatbot's utility and effectiveness
+- content integrity to assess relevance, completeness, accuracy, and factuality of the content provided
+- efficiency to measure the ease of system integration and response generation speed
+- trustworthiness to consider ethical implications of the generated content
+- and practical utility to evaluate the relevance and effectiveness of the content in real-world applications for patients.
 
 

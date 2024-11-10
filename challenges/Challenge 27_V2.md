@@ -1,13 +1,30 @@
-# Challenge 24: Differential diagnostic optimization and mental illness symptoms identification using AI with text data
+# Challenge 27: Evaluation of LLM Performance in Assessing the Appropriateness of Outpatient Colonoscopy Requests According to Current Guidelines
 
-This challenge aims to improve the efficiency and precision of differential diagnostics using clinical text data. Using specific examples, it allows to adjust the diagnostics process in sequential steps, quickly integrate different sources data and analyse them in a flexible way and provide a detailed context to improve the precision and reliability of the AI proposed diagnostics, as well as optimizing the clinical trial selection and the treatment recommendation.
+
+The digestive endoscopy unit receives an increasing number of outpatient colonoscopy requests each year. Many of these requests are either not correctly indicated, or their prioritization does not align with current recommendations. This growing volume exceeds the unit's operational capacity, leading to extended waitlist times for all patients.
+To address this, the proposed challenge aims to individually evaluate outpatient colonoscopy requests, prioritizing or rejecting procedures based on their indications according to the latest clinical guidelines. Currently, requests are received daily in free-text format, and manual evaluation by clinical staff is time-consuming. Automating the process of reading, interpreting, and processing outpatient colonoscopy requests using LLMs (Large Language Models) could streamline this workflow.
+Since LLMs are not specifically trained on endoscopy data and may not reflect the latest guidelines, Retrieval-Augmented Generation (RAG) approach could be used to provide the necessary context. 
 
 ## Objective
 
-To develop an AI model that is able to identify specific diagnostics like bipolar disorder, schizophrenia, depressive disorder, among others., and transdiagnostic symptoms like imsomnia, irritability, or anxyety, from clinical course texts and clinical histories written by health professionals.
+The goal is to create an automated process to read, interpret, and evaluate outpatient colonoscopy requests in free-text format. The system will prioritize or reject procedures based on current clinical guidelines and recommendations.
 
 ## Expected Outcomes
-To be agreed with the mentor.
+The model should be able to determine:
+1.	Whether a request should be accepted or rejected.
+2.	If accepted, the priority level for scheduling the colonoscopy (five levels of priority).
+3.	If rejected, the reason for rejection (seven predefined reasons).
+
+ -- QUITAR --
+
+The study will use pretrained LLMs to analyze free-text colonoscopy requests, generating outputs based on both the requests and a contextual document. The RAG approach will ensure that the model receives the necessary context for making informed decisions.
+The context document will contain guidelines for prioritizing or rejecting requests, as well as the expected format for the model’s output. The model should mirror the outputs of human evaluators, specifically:
+1.	Whether each request should be accepted or rejected.
+2.	If accepted, the priority level for scheduling the colonoscopy (five levels of priority).
+3.	If rejected, the reason for rejection (seven predefined reasons).
+An annotated dataset, already evaluated by human experts, will serve as the ground truth for evaluating the model’s performance. 
+
+ -- QUITAR --
 
 ## Tools
 
@@ -34,20 +51,16 @@ Participants will have the following information/tools to complete the challenge
 
 Below are details of the most relevant aspects of the tools available to participants.
 
+
 ### Database
  
 
 The databases that make up this challenge are:
-- BASE24. Contains:
-	- DAT24_01: Free text document: Discharge report
-	- DAT24_02: Free text document: Emergency discharge report
-	- DAT24_03: Free text document: Evolution report
-	- DAT24_04: Free text document: Neuropsychologycal report, psychometry
-	- DAT24_05: Free text document: TEC report
-	- DAT24_06: Free text document: Neuropicture
-	- DAT24_07: Lab data (LAB)
-	- DAT24_08: Demographic data (DEMO)
-	- DAT24_09: Socioeconomic data (SOCIOECONOMICOS)
+- BASE21. Contains:
+ 	 -	DAT21_01: Free text document: Endoscopy report
+ 	 -	DAT21_02: Free text document: Endoscopy exploration petitions
+ 	 -	DAT21_03: Demographic data (DEMO)
+ 	 -	DAT21_04: Socioeconomic data (SOCIOECONOMICOS)
 
 
 #### Summary of the tables
@@ -78,22 +91,6 @@ B. SOCIECONOMICOS
 | cuida_nomb      | Name of the care giver       |
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
 
-C. LABORATORIO:
-
-| Name      | Description |
-| ----------- | ----------- |
-| ou_med      | Medical unit that performas the extraction    |
-| extrac_date      | Extraction date   |
-| extrac_time      | Extraction time    |
-| lab_ref      | Lab reference   |
-| lab_desc      | Reference description  |
-| result      | Result    |
-| units      | Result units    |
-| rang      | Normal value range   |
-| id_patient_pseu      | Patient identification number that links the patients between tables    |
-| id_epis_pseu      | Episode identification number  |
-
-
 C. FREE TEXT DOCUMENTS
 
 The types of reports that we may encounter are:
@@ -113,7 +110,7 @@ The types of reports that we may encounter are:
 
 In the free-text reports the file name is always structured as follows:
 
-{challenge_number }_{challenge_identifier_number} _{report_type } _{id_patient_pseu} _{creation_date} _{counter}.txt
+{challenge_number}_{challenge_identifier_number}_{report_type}_{id_patient_pseu}_{creation_date}_{counter}.txt
 
 For example:
 01_02_INF_VAL_INI_407789453_20211119_29.txt
@@ -123,6 +120,19 @@ For example:
 -	Id_patient_pseu: 407789453
 -	Creation date (YYYYMMDD): 20211119
 -	Counter: 29
+
+
+
+D. Output 
+
+The model should output the following fields in a tabular format for each request, along with any additional fields specified by the challenge members:
+-	id_patient_pseu
+-	Date of request
+	Date of preference
+-	Request status (accepted or rejected)
+-	If accepted: Priority level (1 to 5)
+-	If rejected: Reason for rejection (1 to 7)
+The priority levels and rejection reasons will be detailed in the context document.
 
 
 ### Shared bucket
@@ -158,10 +168,10 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 # - replace <group_name> by the name of your team (e.g. Team1)
 # - replace <challenge_name>  by the name of the challenge (e.g. Challenge1)
 # - replace <file_name> by the name of the file that you want to store (e.g., main_code_challenge1.ipynb)
-
 ```
 
-## Evaluation metrics
+### Evaluation Metrics
+
 
 | Criterion      | Excellent | Adequate | Needs Improvement | Poor |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -169,7 +179,3 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 | Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
 | Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
 | Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
-
-
-
-

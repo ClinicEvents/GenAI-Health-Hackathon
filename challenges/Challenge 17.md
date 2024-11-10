@@ -1,17 +1,20 @@
-# Challenge 17: Non-structured data extraction from release reports to predict re-admission risk and death during the transactional atention
+# Challenge 17: Non-structured data extraction from release reports to predict re-admission risk and death during the transactional attention
 
-
-This challenge aims to use large language models (LLM) to analyze and extract non-structured data from release reports. The reliability and impact of this data in the predictive models will be evaluated to improve safety and efficiency in post-hospital attention.
+This challenge aims to use large language models (LLMs) to analyze and extract unstructured information from hospital discharge reports. The goal is to structure the information in a way that can be easily exploited by proposing and creating a database to support data persistence, as well as selecting a method for querying this data. Both SQL and NoSQL approaches can be considered for persistence and querying.
+The ultimate objective is to integrate this information into predictive machine learning models to assess and predict the risk of readmission or complications during transitional care. The reliability and impact of this information on predictive models will be evaluated to improve the safety and efficiency of post-hospital care.
 
 
 
 ## Objective
+This challenge aims to use large language models (LLM) to analyze and extract non-structured data from release reports. The reliability and impact of this data in the predictive models will be evaluated to improve safety and efficiency in post-hospital attention.
+Integrate non-structured data extraction from release reports to evaluate and predict re-admission risk and death during the transactional attention.
 
-Integrate non-structured data extraction from release reports in machine learning predictive models to evaluate and predict re-admission risk and death during the transactional atention.
 
+## Expected Outcomes
 
+To be agreed with the mentor.
 
-## AWS Tools
+## Tools
 
 Participants will have the following information/tools to complete the challenge.
 
@@ -21,9 +24,9 @@ Participants will have the following information/tools to complete the challenge
 - Develop:
     - Jupyter Notebook
     - Bedrock
-    - Bucket shared
+    - Shared bucket 
 
-- Manuals. It is recommended to consult the following demos:
+- Guides. It is recommended to consult the following demos:
     - DEMO_bedrock_connection
     - DEMO_RAG_with_KnowledgeBase
     - DEMO_RAG_with_Kendra
@@ -31,16 +34,22 @@ Participants will have the following information/tools to complete the challenge
     - DEMO_s3_read_file
     - DEMO_s3_write_file
 
-## Database
+### Database
       
 The databases that make up this challenge are:
-1.	BASE17. Contains:
+- BASE17. Contains:
     - DAT17_01: Free text document: Discharge report
     -	DAT17_02: Demographic data (DEMO)
     -	DAT17_03: Socioeconomic data (SOCIOECONOMICOS)
 
-**Summary of the tables**
-DEMO
+**All development must be carried out using the services available on AWS. Moving information outside of the specified tools is NOT allowed.**
+
+Below are details of the most relevant aspects of the tools available to participants.
+
+#### Summary of the tables
+
+A. DEMO
+
 | Name      | Description |
 | ----------- | ----------- |
 | Sex      | Patient's sex, 1 for male, 2 for female, 3 for other      |
@@ -54,7 +63,8 @@ DEMO
 | Contact      | Contact person     |
 | id_patient_pseu      | Patient identification number that links the patients between tables      |
 
-SOCIECONOMICOS
+B. SOCIECONOMICOS
+
 | Name      | Description |
 | ----------- | ----------- |
 | register_date      | Register date     |
@@ -64,7 +74,8 @@ SOCIECONOMICOS
 | cuida_nomb      | Name of the care giver       |
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
 
-**Free text documents**
+C. FREE TEXT DOCUMENTS
+
 The types of reports that we may encounter are:
 | Name      | Description |
 | ----------- | ----------- |
@@ -82,7 +93,7 @@ The types of reports that we may encounter are:
 
 In the free-text reports the file name is always structured as follows:
 
-{challenge_number}_{challenge_identifier_number}_{report_type}_{id_patient_pseu}_{creation_date}_{counter}.txt
+{challenge_number} _{challenge_identifier_number} _{report_type} _{id_patient_pseu} _{creation_date} _{counter}.txt
 
 For example:
 01_02_INF_VAL_INI_407789453_20211119_29.txt
@@ -96,46 +107,50 @@ For example:
 
 
 
-## Evaluation metrics
-
-The performance of the predictive models will be evaluated by metrics: precission, sensibility and specificity, AUC and F1-score. Also the impact of the captured variables will be evaluated via LLM with the relative importance in the models.
 
 
-## Shared bucket
-Participants have an available bucket to store all of the desired documents and use them to develop the challenge.
 
+
+### Shared bucket
+
+Participants have access to a shared bucket to store any necessary documents for the challenge.
 
 ```
 https://us-west-2.console.aws.amazon.com/s3/buckets/shared-clinic-hackathon-2024?region=us-west-2&bucketType=general&tab=objects
 ```
 
-Members of each group ONLY will have access to the folder with the name of their group. It is advised to check `demos DEMO_s3_read_file` and `DEMO_s3_write_file` to learn how to write and read a file from a bucket. Use the following values in the demos:
-
+Each group has access ONLY to the folder named after their group. It is recommended to check the demos `DEMO_s3_read_file` and `DEMO_s3_write_file` to learn how to read and write files from a bucket. Use the following values in the demos:
 
 ```python
-BUCKET_NAME = 'shared-clinic-hackathon-2024' 
-BUCKET_FILE_LOCATION_AND_NAME = '<nombre_del_grupo>/<nombre_del fichero>' 
-# NOTA: 
-# - remplazar <nombre_del_grupo> por el nombre del grupo al que usted pertenece  (por ejemplo, Team1) 
-# - remplazar <nombre_del fichero> por el nombre del fichero que se desea leer/escribir.
-``` 
-
+BUCKET_NAME = 'shared-clinic-hackathon-2024'
+BUCKET_FILE_LOCATION_AND_NAME = '<grupo_name>/<file_name>'
+# NOTE:
+# - replace <grupo_name> by the name of your team  (e.g. Team1)
+# - replace <file_name> by the file name you want to read/write.
+```
 
 ## Results
-The challenge will only be validated if the participants save ALL the needed files to replicate the proposed answer by the members of the group. This implies that if the group integrants needed to modify somo of the files that have been provided with, or they have used external info to solve the challenge, they must include it as a part of the answer.
 
+The challenge will only be considered valid if participants save ALL files necessary to reproduce the solution proposed by the group members. This implies that if the group members modified any provided files or used external information to solve the challenge, these must be included as part of the solution.
 
-The files must be stored in the buscket [results-clinic-hackathon-2024](https://us-west-2.console.aws.amazon.com/s3/buckets/results-clinic-hackathon-2024?region=us-west-2&bucketType=general&tab=objects). The files location inside the bucket must be: `<nombre_grupo>/<nombre_reto>/<ficheros_resultados>`. 
+Files must be saved in the bucket: [results-clinic-hackathon-2024](https://us-west-2.console.aws.amazon.com/s3/buckets/results-clinic-hackathon-2024?region=us-west-2&bucketType=general&tab=objects). The file location within the bucket (prefixes) must be: `<group_name>/<challenge_name>/<file_name>`.
 
-
-It is advised to use demo `DEMO_s3_write_file` to write the files/code of the proposed answer. Use the following values in the demos:
-
+It is recommended to use the `DEMO_s3_write_file` demo to write the files/code of the proposed solution. Use the following values in the demos:
 
 ```python
-BUCKET_NAME = 'results-clinic-hackathon-2024' 
-BUCKET_FILE_LOCATION_AND_NAME = '<nombre_del_grupo>/<nombre_del reto>/<nombre_del fichero>' 
+BUCKET_NAME = 'results-clinic-hackathon-2024'
+BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 # NOTA: :
-# - remplazar <nombre_del_grupo> por el nombre del grupo al que usted pertenece (por ejemplo, Team1)
-# - remplazar <nombre_del reto> por el nombre del reto al que corresponde la solución propuesta (por ejemplo, Challenge1)
-# - remplazar <nombre_del fichero> por el nombre del fichero que se desea almacenar (por ejemplo, main_code_challenge1.ipynb)
-``` 
+# - replace <group_name> by the name of your team (e.g. Team1)
+# - replace <challenge_name>  by the name of the challenge (e.g. Challenge1)
+# - replace <file_name> by the name of the file that you want to store (e.g., main_code_challenge1.ipynb)
+
+```
+## Evaluation Metrics
+
+| Criterion      | Excellent | Adequate | Needs Improvement | Poor |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Clinical Accuracy      | All information is accurate and clinically relevant.     | Most information is accurate, with minor omissions.     | Several inaccuracies affecting interpretation.     | Incorrect or confusing information, compromising utility. |
+| Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
+| Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
+| Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
