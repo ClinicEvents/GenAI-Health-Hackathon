@@ -12,11 +12,7 @@ To identify, based on the data contained in the admission report, radiology repo
 
 ## Expected Outcomes
 
-A pre-collected patient database will be provided, and the admission report, radiology report (perfusion CT/stroke code and arteriography), and clinical courses from the first 24 hours will be evaluated. We have a dataset with already categorized patients (evolution to malignant infarction or not), which will be divided into two groups:
-    
-**Training Set (2/3 of the total)**: Documents from patients with known outcomes (malignant yes or no) will be provided to the model, explaining the consultation objective (few-shot prompting and context window). The model can also be guided with keywords from reports/clinical courses corresponding to factors associated with the risk of developing malignant cerebral infarction (e.g., extensive, large, ASPECTS 0-5 in CT report; drowsy and synonyms, worse, headache or vomiting in clinical courses; TICI 0-2a in arteriography). A script in Jupyter Notebook could be designed to check the performance of the model's responses on different subsets of data from this training set.
-   
-**Test Set (1/3 of the total)**: This will be used to compare the performance achieved by different groups, with the aim of identifying the tool with the highest predictive capability while avoiding issues such as overfitting.
+
 
 ## Tools
 
