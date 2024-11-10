@@ -15,16 +15,6 @@ The model should be able to determine:
 2.	If accepted, the priority level for scheduling the colonoscopy (five levels of priority).
 3.	If rejected, the reason for rejection (seven predefined reasons).
 
- -- QUITAR --
-
-The study will use pretrained LLMs to analyze free-text colonoscopy requests, generating outputs based on both the requests and a contextual document. The RAG approach will ensure that the model receives the necessary context for making informed decisions.
-The context document will contain guidelines for prioritizing or rejecting requests, as well as the expected format for the model’s output. The model should mirror the outputs of human evaluators, specifically:
-1.	Whether each request should be accepted or rejected.
-2.	If accepted, the priority level for scheduling the colonoscopy (five levels of priority).
-3.	If rejected, the reason for rejection (seven predefined reasons).
-An annotated dataset, already evaluated by human experts, will serve as the ground truth for evaluating the model’s performance. 
-
- -- QUITAR --
 
 ## Tools
 
