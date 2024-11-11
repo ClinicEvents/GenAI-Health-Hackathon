@@ -19,11 +19,11 @@ All participants in this event must comply with the following conditions:
     - Kendra
     - SageMaker (Jupyter Notebook)
 
-NOTE: You can employ libraries like Langchain in Jupyter Notebook (SageMaker) but always using AWS services.
+NOTE: You can employ libraries like [LangChain](https://www.langchain.com/) in Jupyter Notebook (SageMaker) but always using AWS services.
 
-- **NOT** allowed to extract/move information out of the specified places for all of the challenges' files.
+- It is **NOT** allowed to extract/move information outside of the locations specified in the challenge files.
 
-- The challenge will only be validated if the participants save ALL the needed files to replicate the provided answer by the group members.
+- The challenge will only be accepted if the participants save ALL the needed files to replicate the provided answer by the group members.
 
 ## 2. Git content
 
@@ -50,7 +50,7 @@ NOTE: You can employ libraries like Langchain in Jupyter Notebook (SageMaker) bu
 
 3. *EvaluationCriteria.pdf*: contains the criteria that will be used on the challenge evaluation.
 
-## 3. AWS environment.
+## 3. AWS environment
 ### 3.1 Access to your account environment
 Workshop Studio has provisioned a dedicated, temporary AWS account for every team participating. You will need the Participant Hash provided upon entry, and your email address to track your unique session.
 
@@ -66,7 +66,7 @@ Workshop Studio has provisioned a dedicated, temporary AWS account for every tea
 
 ![alt text](images/image-7.png)
 
-4. This will take you to the Workshop, click Open AWS console to connect to your AWS Account
+4. This will take you to the Workshop, click "Open AWS console" to connect to your AWS Account
 
 ![alt text](images/image-8.png)
 
@@ -87,11 +87,11 @@ From aws console, navigate to Amazon Bedrock.
 ![alt text](images/image-1.png)
 
 #### 3.2.2. Create your Jupyter Notebook Instance.
-The challanges have been designed to be developed with Jupyter Notebook in SageMaker. The procedure to open this service is detailed below. 
+The challenges have been designed to be developed with Jupyter Notebook in SageMaker. The procedure to open this service is detailed below. 
 
-- From aws console, navigate to Sagemaker service.
+- From AWS console, navigate to Sagemaker service.
 
-- In Sagemaker console, select Notebooks from the left panel.
+- In Sagemaker console, select "Notebooks" from the left panel.
 
 ![alt text](images/image-2.png)
 
