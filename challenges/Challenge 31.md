@@ -48,6 +48,7 @@ The databases that make up this challenge are:
   -	DAT30_01: Clinical course
   -	DAT30_02: Demographic data (DEMO)
   -	DAT30_03: Socioeconomic data (SOCIOECONOMICOS)
+- OUT30: Table that allows you to compare with the results obtained.
 
 
 #### Summary of the tables

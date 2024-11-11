@@ -55,6 +55,7 @@ The databases that make up this challenge are:
     - DAT19_07: Lab data (LAB)
     - DAT19_08: Demographic data (DEMO)
     - DAT19_09: Socioeconomic data (SOCIOECONOMICOS)
+- OUT19: Table that allows you to compare with the results obtained.
 
 
 

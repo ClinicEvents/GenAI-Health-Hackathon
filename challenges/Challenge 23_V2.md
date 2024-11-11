@@ -52,6 +52,7 @@ The databases that make up this challenge are:
  	 -	DAT23_02: Laboratory data (LAB)
  	 -	DAT23_03: Demographic data (DEMO)
  	 -	DAT23_04: Socioeconomic data (SOCIOECONOMICOS)
+- OUT23: Table that allows you to compare with the results obtained.
 
 
 

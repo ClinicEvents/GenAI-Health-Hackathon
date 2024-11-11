@@ -12,23 +12,7 @@ OntoPharma is a support system for clinical decisions, designed, developed and i
 Compare the use of ontologies as a knowledge base with LLMs in the area of patient's safety in medication use.
 
 ## Expected Outcomes
-Two possibilities can be presented:
 
-**1)	RAG methodology**
-
-a.	Feed the LLM with the data sources used in OntoPharma
-b.	Ask the LLM about a patient's treatment adequation bearing in mind their clinicial variables.
-c.	Compare the LLM results with OntoPharma's in SAP-QAS environment.
-
-This methodology would allow to establish if LLMs are superior to the ontologies for knowledge representation capacity, due to them using the same data sources.
-
-**2)	Few-shot promting**
-
-a.	Define some examples to point the LLM on how to return info.
-b.	Ask the LLM about a patient's treatment adequation bearing in mind their clinicial variables.
-c.	Compare the LLM results with OntoPharma's in SAP-QAS environment.
-
-This methodology would allow to establish if LLMs have better info to guarantee the patient's safety in medication use than OntoPharma.
 
 ## Tools
 

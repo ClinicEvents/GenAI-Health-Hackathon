@@ -1,10 +1,11 @@
 # Challenge 29: Hospital Clinic Web
 
-El Hospital Clinic de Barcelona (HCB) dispone de una Web con información clinica de interes para los usuarios, por un lado el problema en que llegar a esta información no siempre es sencillo y por otro no sabemos si esta identificando toda la información que necesita. Para mejorar el acceso a la información una de las propuestas es poder utilizar GenIA. 
+The Hospital Clínic website is one of the most visited non-English-speaking websites globally, a testament to the exceptional expertise of its healthcare professionals and the outstanding quality of its content. This reflects the hospital's status as a leader in the field of medicine, both locally and internationally. However, despite its rich repository of information, the current navigation architecture, based on traditional hyperlink systems, and the limited functionality of its local search engines present significant challenges. These include fragmented information across various sections, difficulty locating specific content, and search results that are either too broad or irrelevant, making it harder for users to access the precise information they need efficiently.
+The challenge lies in overcoming these limitations by leveraging the advanced semantic understanding and natural language processing capabilities of modern large language models (LLMs). These models could enable users to interact with the website in a conversational manner, using natural language queries to locate specific information seamlessly. By doing so, the website could provide more accurate, relevant, and user-centered results, dramatically improving the user experience. This approach would transform the website from a static information portal into an intelligent, dynamic platform that enhances user engagement and accessibility, aligning with the hospital's commitment to innovation and excellence in patient care and communication.
 
 ## Objective
 
-El objetivo es poder dar una repuesta al usuario basandonos en la información que contiene la web del HCB
+El objetivo es generar un chatbot poder dar una repuesta al usuario basandonos en la información que contiene la web del HCB
 
 ## Expected Outcomes
 
@@ -42,14 +43,6 @@ https://www.clinicbarcelona.org/asistencia/
 
 Tened en cuenta que al hacer el RAG supera el tamaño permitido y no se puede hacer un RAG de toda la URL.
 
-### Evaluation Metrics
-
-- **Tasa de rendimiento**: Número de respuestas correctas dividido por el número de sesiones activas (una respuesta correcta es una respuesta sugerida por el bot y cliqueada por el usuario en caso de múltiples opciones, o abierta instantáneamente en caso de una fuerte coincidencia semántica).
-- **Tasa de satisfacción**: Nota media otorgada al evaluar las respuestas del chatbot (para equilibrar con la tasa de evaluación).
-- **Tasa de evaluación**: Porcentaje de respuestas acertadas.
-- **Número promedio de interacciones**: Se utiliza para evaluar el Índice de esfuerzo del cliente (CES) en el chatbot y debe correlacionarse con el índice de satisfacción. Si este último es muy bajo, es posible que el bot esté involucrando a los usuarios en demasiadas ramas y pasos para satisfacer sus necesidades. En este caso, una solución puede ser corregir los árboles de decisión o la arquitectura de la base de conocimiento.
-- **Tasa de falta de respuesta**:La cantidad de veces que el chatbot no ha podido enviar ningún contenido después de una pregunta (debido a la falta de contenido o malentendido).
-
 
 ### Shared bucket
 
@@ -86,6 +79,15 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 # - replace <file_name> by the name of the file that you want to store (e.g., main_code_challenge1.ipynb)
 
 ```
+### Evaluation Metrics
+
+- **Tasa de rendimiento**: Número de respuestas correctas dividido por el número de sesiones activas (una respuesta correcta es una respuesta sugerida por el bot y cliqueada por el usuario en caso de múltiples opciones, o abierta instantáneamente en caso de una fuerte coincidencia semántica).
+- **Tasa de satisfacción**: Nota media otorgada al evaluar las respuestas del chatbot (para equilibrar con la tasa de evaluación).
+- **Tasa de evaluación**: Porcentaje de respuestas acertadas.
+- **Número promedio de interacciones**: Se utiliza para evaluar el Índice de esfuerzo del cliente (CES) en el chatbot y debe correlacionarse con el índice de satisfacción. Si este último es muy bajo, es posible que el bot esté involucrando a los usuarios en demasiadas ramas y pasos para satisfacer sus necesidades. En este caso, una solución puede ser corregir los árboles de decisión o la arquitectura de la base de conocimiento.
+- **Tasa de falta de respuesta**:La cantidad de veces que el chatbot no ha podido enviar ningún contenido después de una pregunta (debido a la falta de contenido o malentendido).
+
+
 
 
 

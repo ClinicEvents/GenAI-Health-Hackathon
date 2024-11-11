@@ -43,7 +43,8 @@ Below are details of the most relevant aspects of the tools available to partici
 ### Database
  
 The databases that make up this challenge are:
-BASE19. Contains:
+
+- BASE19. Contains:
   	-	DAT19_01: Free text document: Emergency discharge report
  	 -	DAT19_02: Free text document: Hospital admission report
  	 -	DAT19_03: Free text document: Transport
@@ -53,6 +54,7 @@ BASE19. Contains:
  	 - DAT19_07: Lab data (LAB)
  	 - DAT19_08: Demographic data (DEMO)
  	 - DAT19_09: Socioeconomic data (SOCIOECONOMICOS)
+- OUT19: Table that allows you to compare with the results obtained.
 
 
 

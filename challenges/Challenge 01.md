@@ -140,7 +140,7 @@ Below are details of the most relevant aspects of the tools available to partici
  
 
 The databases that make up this challenge are:
-1. BASE01. Contains:
+- BASE01. Contains:
 	- DAT01_01: Free text document: Initial valuation
 	- DAT01_02: Free text document: Evolution
 	- DAT01_03: Demographic data (DEMO)
