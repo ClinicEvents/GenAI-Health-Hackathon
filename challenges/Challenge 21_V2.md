@@ -224,7 +224,7 @@ The databases that make up this challenge are:
 
 
 
-#### Summary of the tables**
+#### Summary of the tables
 
 A. DEMO
 

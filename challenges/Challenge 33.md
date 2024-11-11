@@ -202,4 +202,3 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 
 
 
-
