@@ -1,6 +1,6 @@
 # GenAI Health Hackathon
 
-GenAI Health Hack 2024 is an event created by Hospital Clínic de Barcelona with has the objective of exploring generative AI in the medical field. 
+GenAI Health Hackathon 2024 is an event created by Hospital Clínic de Barcelona with has the objective of exploring generative AI in the medical field. 
 
 
 This document is divided in the following sections:
@@ -8,23 +8,10 @@ This document is divided in the following sections:
     2. Git contents
     3. AWS environment
 
-**[ES] IMPORTANTE: Leer atentamente todo este documento.**   
-**[EN] IMPORTANT: Read carefully all of this document.**
 
-## 1. [ES] Normas del evento
-Los participantes de este evento deben cumplir las siguientes condiciones:
-- Todo el desarrollo de los reto se debe realizar utilizando los servicios disponibles en AWS. Los servicios disponibles son:
-    - S3
-    - Bedrock 
-    - Kendra
-    - SageMaker (Jupyter Notebook)
+**IMPORTANT: Read carefully all of this document.**
 
-
-- **NO** se permite extraer/mover información fuera de los lugares especificados en cada documento de los retos.
-
-- El reto únicamente se dará por válido si los participantes guardan TODOS los ficheros necesarios para reproducir la solución propuesta por los miembros del grupo.
-
-## 1. [EN] Event rules
+## 1. Event rules
 All participants in this event must comply with the following conditions:
 - All of the challenge development must be done using AWS services. The available services are:
     - S3
@@ -32,8 +19,9 @@ All participants in this event must comply with the following conditions:
     - Kendra
     - SageMaker (Jupyter Notebook)
 
+NOTE: You can employ libraries like Langchain in Jupyter Notebook (SageMaker) but always using AWS services.
 
-- **NOT** allowed to extract/move info out of the specified places for all of the challenges' files.
+- **NOT** allowed to extract/move information out of the specified places for all of the challenges' files.
 
 - The challenge will only be validated if the participants save ALL the needed files to replicate the provided answer by the group members.
 
@@ -58,9 +46,9 @@ All participants in this event must comply with the following conditions:
 11|33|IRB Screening Agent
 12|28|Natural Language DataNex (data warehouse) Querying
 
-2. *Demos* (folder): contains tutorials to help the participants to develop the assigned challeng in AWS environment. Each challenge specifies the demos that can be used.
+2. *Demos* (folder): contains tutorials to help the participants to develop the assigned challenge in AWS environment. Each challenge specifies the demos that can be used.
 
-3. *EvaluationCriteria.pdf*: contains the creteria that will be used on the challenge avaluation.
+3. *EvaluationCriteria.pdf*: contains the criteria that will be used on the challenge evaluation.
 
 ## 3. AWS environment.
 ### 3.1 Access to your account environment
