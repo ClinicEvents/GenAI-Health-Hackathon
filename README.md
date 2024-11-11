@@ -8,10 +8,10 @@ This document is divided in the following sections:
     2. Git contents
     3. AWS environment
 
-**(ES) IMPORTANTE: Leer atentamente todo este documento.**   
-**(EN) IMPORTANT NOTE: Read carefully all of this document.**
+**[ES] IMPORTANTE: Leer atentamente todo este documento.**   
+**[EN] IMPORTANT: Read carefully all of this document.**
 
-## 1. (ES) Normas del evento
+## 1. [ES] Normas del evento
 Los participantes de este evento deben cumplir las siguientes condiciones:
 - Todo el desarrollo de los reto se debe realizar utilizando los servicios disponibles en AWS. Los servicios disponibles son:
     - S3
@@ -24,7 +24,7 @@ Los participantes de este evento deben cumplir las siguientes condiciones:
 
 - El reto únicamente se dará por válido si los participantes guardan TODOS los ficheros necesarios para reproducir la solución propuesta por los miembros del grupo.
 
-## 1. (EN) Event rules
+## 1. [EN] Event rules
 All participants in this event must comply with the following conditions:
 - All of the challenge development must be done using AWS services. The available services are:
     - S3
