@@ -162,6 +162,8 @@ A. DEMO
 | Contact*      | Contact person     |
 | id_patient_pseu      | Patient identification number that links the patients between tables      |
 
+*NOTE: Check Dictionaries file for the description of the value
+
 B. SOCIECONOMICOS
 
 | Name      | Description |
@@ -172,6 +174,8 @@ B. SOCIECONOMICOS
 | vive_con*      | Co-habitation status. Alone, with family, shared home.   |
 | cuida_nomb      | Name of the care giver       |
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
+
+*NOTE: Check Dictionaries file for the description of the value
 
 C. FREE TEXT DOCUMENTS
 
