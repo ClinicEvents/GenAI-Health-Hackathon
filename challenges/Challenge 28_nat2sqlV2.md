@@ -8,7 +8,7 @@ From this need, this challenge was born, aiming to generate a SQL query from nat
 
 ## Objective
 
-Generate an SQL query from natural language input. Compare the results with the model: nat2sql-DSC.
+Generate a SQL query from natural language input. Compare the results with the model: nat2sql-DSC.
 
 Improvement 1: the model must be insensitive to misspelling/language in order to filter the data correctly.  
 

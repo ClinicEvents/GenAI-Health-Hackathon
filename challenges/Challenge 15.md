@@ -12,6 +12,19 @@ To identify, based on the data contained in the admission report, radiology repo
 
 ## Expected Outcomes
 
+### Input
+
+Un paciente varón de 50 años que en el informe de admisión pone que no tiene antecedentes y llega a urgencias con un síndrome hemisférico izquierdo completo del despertar. Se hace un TC en cuyo informe figura que tiene una lesión isquémica extensa (ASPECTS 5) con caída de flujo y volumen en la perfusión. Se hace trombectomía mecánica sin lograr recanalización exitosa e ingresa en la unidad. En los cursos de enfermería y médicos de los dos días siguientes informan de una disminución progresiva del nivel de consciencia. Se hacen TC de control que comentan la presencia de abundante edema cerebral y desviación de línea media y finalmente acaba realizándose una craniectomía descompresiva.
+
+### Output
+
+Key words must be identified:
+
+- síndrome hemisférico izquierdo completo
+- lesión isquémica extensa (ASPECTS 5) con caída de flujo y volumen
+- sin lograr recanalización exitosa
+- disminución progresiva del nivel de consciencia
+- abundante edema cerebral y desviación de línea media
 
 
 ## Tools

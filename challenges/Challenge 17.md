@@ -6,8 +6,7 @@ The ultimate objective is to integrate this information into predictive machine 
 
 
 ## Objective
-This challenge aims to use large language models (LLM) to analyze and extract non-structured data from release reports. The reliability and impact of this data in the predictive models will be evaluated to improve safety and efficiency in post-hospital attention.
-Integrate non-structured data extraction from release reports to evaluate and predict re-admission risk and death during the transactional attention.
+This challenge aims to use large language models (LLM) to  extract  non-structured data from release reports to evaluate and predict re-admission risk and death during the transactional attention.
 
 
 ## Expected Outcomes

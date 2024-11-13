@@ -1,17 +1,19 @@
-# Challenge 19: AI implementation for personal therapeutic advise for stroke patients
+# Challenge 32: Optimizing Precision Oncology in the Clinic Comprehensive Cancer Center with Generative AI (OPERA Project)
 
 
-The project aims to produce AI generated advise and evaluation for stroke patients through interactive visualizations like dashboards and KPI(Key Performance Indicators).
-This challenge focuses stroke patients, but it can be extrapolated to any illness or specialty.
-The target population includes patients that have been released after an hospital stay caused by an stroke. These patients can have additional diagnostics like high blood pressure, diabetes and dyslipidemia, and the project will focus on customizing the therapeutic advise for these specific cases.
+This project aims to improve the decision-making process for patients with advanced solid tumors before starting systemic therapy. It addresses various challenges that combine the integration of clinical, biological, pathological, and molecular data with alignment to European guidelines and connection to clinical trial networks. 
 
-This challenge has potential to transform the way therapeutic advises are made, using AI to improve accuracy and efficiency in clinical data evaluation and the generation of clinical guides and internal protocols based recommendations. Furthermore, interactive visualization will ease the comprehension and implementation of the recommendations, helping to improve the clinical results and patient's prognosis.
+The first challenge involves creating a comprehensive summary of information extracted from the SAP system, consolidating all relevant data for patients with solid tumors. This information will enable oncologists to perform a more accurate and efficient initial assessment.
+
+Secondly, the project seeks to ensure that this process aligns with European clinical guidelines, allowing oncologists to make therapeutic decisions in accordance with established best practices. Additionally, the project aims to facilitate the identification of patients eligible for clinical trials by creating a direct link between patient information and available clinical trial networks, thus improving access to new treatment options.
+
+Finally, the project explores the development of a scoring model to help clinicians optimize initial decision-making in precision medicine. This model will use advanced analytical tools to suggest therapeutic strategies tailored to individual patient profiles, facilitating personalized treatment. The project is complemented by a Q&A tool that allows users to consult clinical guidelines in natural language, helping clinicians query optimal management based on patient data and available guidelines.
 
 
 
 ## Objective
 
-Use AI to analyze the release reports of stroke patients and their complementary studies (blood and image testing), to provide individual therapeutic recommendations based on clinical guides and Stroke Unit's internal protocols.
+The clinical guidelines Q&A aims to ensure that this process aligns with European clinical guidelines, enabling oncologists to make therapeutic decisions in accordance with established best practices.
 
 ## Expected Outcomes
 To be agreed with the mentor.
@@ -26,7 +28,7 @@ Participants will have the following information/tools to complete the challenge
 - Develop:
     - Jupyter Notebook
     - Bedrock
-    - Shared bucket 
+    - Bucket shared
 
 - Guides. It is recommended to consult the following demos:
     - DEMO_bedrock_connection
@@ -36,25 +38,20 @@ Participants will have the following information/tools to complete the challenge
     - DEMO_s3_read_file
     - DEMO_s3_write_file
 
+
 **All development must be carried out using the services available on AWS. Moving information outside of the specified tools is NOT allowed.**
 
 Below are details of the most relevant aspects of the tools available to participants.
 
 ### Database
- 
-The databases that make up this challenge are:
-- BASE19. Contains:
-    -	DAT19_01: Free text document: Emergency discharge report
-    -	DAT19_02: Free text document: Hospital admission report
-    -	DAT19_03: Free text document: Transport
-    -	DAT19_04: Free text document: Cranial CT
-    - DAT19_05: Clinical course
-    - DAT19_06: Free text document: Discharge report
-    - DAT19_07: Lab data (LAB)
-    - DAT19_08: Demographic data (DEMO)
-    - DAT19_09: Socioeconomic data (SOCIOECONOMICOS)
-- OUT19: Table that allows you to compare with the results obtained.
 
+The databases that make up this challenge are:
+
+- BASE30. Contains:
+  -	DAT30_01: Clinical course
+  -	DAT30_02: Demographic data (DEMO)
+  -	DAT30_03: Socioeconomic data (SOCIOECONOMICOS)
+- OUT30: Table that allows you to compare with the results obtained.
 
 
 #### Summary of the tables
@@ -85,23 +82,9 @@ B. SOCIECONOMICOS
 | cuida_nomb      | Name of the care giver       |
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
 
-C. LABORATORIO:
-
-| Name      | Description |
-| ----------- | ----------- |
-| ou_med      | Medical unit that performas the extraction    |
-| extrac_date      | Extraction date   |
-| extrac_time      | Extraction time    |
-| lab_ref      | Lab reference   |
-| lab_desc      | Reference description  |
-| result      | Result    |
-| units      | Result units    |
-| rang      | Normal value range   |
-| id_patient_pseu      | Patient identification number that links the patients between tables    |
-| id_epis_pseu      | Episode identification number  |
 
 
-D. FREE TEXT DOCUMENTS
+C. FREE TEXT DOCUMENTS
 
 The types of reports that we may encounter are:
 
@@ -121,7 +104,7 @@ The types of reports that we may encounter are:
 
 In the free-text reports the file name is always structured as follows:
 
-{challenge_number}_{challenge_identifier_number}_{report_type}_{id_patient_pseu}_{creation_date}_{counter}.txt
+{challenge_number} _{challenge_identifier_number} _{report_type} _{id_patient_pseu} _{creation_date} _{counter}.txt
 
 For example:
 01_02_INF_VAL_INI_407789453_20211119_29.txt
@@ -131,6 +114,8 @@ For example:
 -	Id_patient_pseu: 407789453
 -	Creation date (YYYYMMDD): 20211119
 -	Counter: 29
+
+
 
 
 
@@ -169,10 +154,21 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 # - replace <file_name> by the name of the file that you want to store (e.g., main_code_challenge1.ipynb)
 
 ```
+
+
+
 ## Evaluation Metrics
 
--	**Data Extraction Accuracy**: measuring the accuracy with which AI extracts relevant information from hospital discharge reports compared to a manual reference extraction.
--	**Consistency of recommendations**: assessing the agreement between AI-generated recommendations and clinical guidelines/internal protocols.
--	**Processing time**: measuring the time needed to extract, process, and analyze data, compared to traditional manual methods.
--	**Impact on clinical decision-making**: analyzing the impact of AI-generated recommendations on therapeutic decisions and the improvement of patients' clinical outcomes.
--	**Visualization usability**: assessing the usability and comprehensibility of dashboards and KPIs for medical staff through surveys and direct feedback.
+| Criterion      | Excellent | Adequate | Needs Improvement | Poor |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Clinical Accuracy      | All information is accurate and clinically relevant.     | Most information is accurate, with minor omissions.     | Several inaccuracies affecting interpretation.     | Incorrect or confusing information, compromising utility. |
+| Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
+| Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
+| Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
+
+
+
+
+
+
+

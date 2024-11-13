@@ -15,7 +15,32 @@ The methodology employed to address this challenge could lead to more efficient 
 To develop an AI model with a diagnostic protocol that prioritizes and limits diagnostic testing to achieve maximum cost-efficiency in infection diagnosis, based on the suspicion of bacterial, viral, or fungal infection, using a dataset of neutropenic patients with malignant hematologic conditions.
 
 ## Expected Outcomes
-To be agreed with the mentor.
+
+### Input
+
+Predict the likelihood of each microorganism infection category: bacterial, viral, and fungal. The likelihood for each category should be represented as a floating-point value within the range of 0.0 to 1.0, inclusive, where 0.0 indicates very unlikely and 1.0 indicates very likely.
+
+### Output
+
+```json
+{ 
+"results": [ 
+    { 
+    "microorganism_type": "viral", 
+    "probability": 0.7
+    }, 
+    { 
+    "microorganism_type": "bacterial", 
+    "probability": 0.4
+    }, 
+    { 
+    "microorganism_type": "fungal", 
+    "probability": 0.1 
+    } 
+] 
+}
+
+```
 
 
 ## Tools
@@ -187,22 +212,7 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 ```
 ## Evaluation Metrics
 
-| Criterion      | Excellent | Adequate | Needs Improvement | Poor |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| Clinical Accuracy      | All information is accurate and clinically relevant.     | Most information is accurate, with minor omissions.     | Several inaccuracies affecting interpretation.     | Incorrect or confusing information, compromising utility. |
-| Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
-| Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
-| Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
-
-
-## Evaluation Metrics
-
-| Criterion      | Excellent | Adequate | Needs Improvement | Poor |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| Clinical Accuracy      | All information is accurate and clinically relevant.     | Most information is accurate, with minor omissions.     | Several inaccuracies affecting interpretation.     | Incorrect or confusing information, compromising utility. |
-| Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
-| Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
-| Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
+Sensitivity, Specificity, Positive Predictive Value (PPV), Negative Predictive Value (NPV), Accuracy, F1 Score, AUC-ROC.
 
 ## Annex
 

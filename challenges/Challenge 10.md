@@ -9,9 +9,22 @@ OntoPharma is a support system for clinical decisions, designed, developed and i
 
 ## Objective
 
-Compare the use of ontologies as a knowledge base with LLMs in the area of patient's safety in medication use.
+Generate recommendations to help the professional make clinical decisions in the medication area.
 
 ## Expected Outcomes
+
+The report must contain the following:
+
+- **Patient ID.**
+- **Patient age**
+- **Number of alerts generated due to inappropriate prescription**
+- **Drug that triggered each alert**
+- **Type of alert**. Specify as: exceeds maximum dose, presence of drug interaction, need for dose adjustment according to renal function, previous adverse reaction to the medication, presence of warning signals, high pharmacotherapeutic complexity, high anticholinergic or sedative burden”
+- **Description of the reason for the alert**
+- **Recommended action** (if applicable)
+- **Relevance of the alert** (if applicable)
+- **Pharmacotherapeutic complexity calculation** (if applicable)
+- **Anticholinergic burden calculation** (if applicable)"
 
 
 ## Tools
@@ -39,30 +52,17 @@ Participants will have the following information/tools to complete the challenge
 Below are details of the most relevant aspects of the tools available to participants.
 
 ### Database
-
-**REVISAR QUE HAY EN EL BACKET**
  
-SAP Dataset Clinic Pain (BASE10)
+SAP Dataset Clinic (BASE10)
 
+- Databases used as data sources.
+- Agencia Española del Medicamento y Productos Sanitarios' prescription nomenclator (.xml file)
+- CatSalut's safety module for electronic receipts (.xlsx file)
+- ABX-dosage database's info (.xlsx file)
+- Specific population expert panel's info (cronical patient and newborn patient) (.xlsx and pdf files)
+- 100 clinical cases that may contain potentially inappropriate prescriptions
+- OntoPharma obtained results. Patient's safety results for medication use will previously be obtained from a test environment (SAP-QAS) and reflected in a file to compare them to LLM results.
 
-Table 1. Patients' clinic variables to evaluate the suitability of a treatment.
-
-**Variables clínicas de los pacientes**
-- **Datos demográficos:** Fecha de nacimiento, Edad postmenstrual (caso de uso neonatos), Peso.
-- **Datos relacionados con el tratamiento farmacológico:** Fármaco, Dosis, Unidad de dosis, Frecuencia, Vía de administración.
-- **Registro de reacciones adversas a fármacos previas:** ALP, fosfatasa alcalina; ALT, alanino aminotransferasa; AST, aspartato aminotransferasa; CPK, creatina-fosfocinasa; HA1C, hemoglobina glicosilada; T4, tiroxina; TSH, hormona estimulantes de la tiroides; WBC, recuento de glóbulos blancos.
-
--	Databases used as data sources.
-  
-  - Agencia Española del Medicamento y Productos Sanitarios' prescription nomenclator (.xml file)
- 
-  - CatSalut's safety module for electronic receipts (.xlsx file)
- 
-  - ABX-dosage database's info (.xlsx file)
-  
-  - Specific population expert panel's info (cronical patient and newborn patient) (.xlsx and pdf files)
-  
--	OntoPharma obtained results. Patient's safety results for medication use will previously be obtained from a test environment (SAP-QAS) and reflected in a file to compare them to LLM results.
 
 ### Shared bucket
 
@@ -99,7 +99,7 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 # - replace <file_name> by the name of the file that you want to store (e.g., main_code_challenge1.ipynb)
 ```
 
-### Evaluation metrics
+## Evaluation metrics
 
 The LLM delivered results will be evaluated by an expert panel in the medication field. They will be responsible for:
 -	Verification of the accuracy and importance of the LLM generated alerts.
@@ -118,10 +118,6 @@ The alerts that OntoPharma generates are the following:
 -	High anticholinergic load alert. Applies for > 65 years old patients and Drug Burden Index ≥2 tested anticholinergic load.
 -	High pharmacotherapy complexity alert. Applies for > 65 years old patients and Medication Regimen Complexity Index ≥40 tested complexity.
 
-
-**Newborn patient:**
--	Inadequate antibiotics therapy dose alert.
--	Inadequate antibiotics therapy administration frequency alert. LLM interaction methodology.
 
 
 

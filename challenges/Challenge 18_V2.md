@@ -1,4 +1,4 @@
-# Challenge 18: MediRol. AI-guided Virtual Medical Simulation
+# Challenge 18: AI-guided Virtual Medical Simulation (MediRol)
 
 
 Virtual clinical case simulator based on console-style RPG games

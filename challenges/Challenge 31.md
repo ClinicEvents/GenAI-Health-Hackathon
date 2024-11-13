@@ -1,4 +1,4 @@
-# Challenge 31: The OPERA Project: Optimizing Precision Oncology in the Clinic Comprehensive Cancer Center with Generative AI
+# Challenge 31: Optimizing Precision Oncology in the Clinic Comprehensive Cancer Center with Generative AI (OPERA Project)
 
 This project aims to improve the decision making process for patients with advanced solid tumors before starting systematic therapy, addressing various challenges that combine clinical, biological, pathological and molecular data integration with European guides and connection with clinical samples networks.
 The first challenge is to create a comprehensive summary of the SAP-extracted data, with all of the relevant data of the solid tumor patients. This information will provide a sharper and more efficient starting evaluation for the oncologists.

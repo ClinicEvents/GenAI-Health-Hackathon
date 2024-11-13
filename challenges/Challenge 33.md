@@ -1,17 +1,17 @@
-# Challenge 33: 
+# Challenge 33: IRB Screening Agent
 
-The ethics committee of Hospital Clínic faces the demanding task of reviewing over 800 approval requests annually, all while operating with limited resources. This high workload often leads to recurrent patterns, as many clarification requests are similar across multiple applications. Recognizing this, we propose an innovative challenge: to develop a solution capable of analyzing the content of a proposed project and automatically suggesting clarifications that align with the committee's typical requirements. This approach aims to streamline the review process, reduce the time and effort needed for manual evaluation, and ensure consistency and efficiency in addressing common issues across applications.
+The ethics committee of Hospital Clínic faces the demanding task of reviewing over 800 approval requests annually, all while operating with limited resources. This high workload often leads to recurrent patterns, as many clarification requests are similar across multiple applications. 
+
+Recognizing this, we propose an innovative challenge: to develop a solution capable of analyzing the content of a proposed project and automatically suggesting clarifications that align with the committee's typical requirements. This approach aims to streamline the review process, reduce the time and effort needed for manual evaluation, and ensure consistency and efficiency in addressing common issues across applications.
 
 
 
 ## Objective
-The objective is based on the protocol sent by a researcher, to generate what clarifications the protocol needs from the researcher so that his project can be accepted.
+The objective is to determine which modifications are required to be applied to a protocol submitted by a researcher to meet the conditions for its acceptance.
 
 ## Expected Outcomes
 
- - **An example protocol submitted by a researcher might be:**:
-
-------
+### Input: protocol submitted 
 
 2	Justificación 
 Las personas con Trastorno del Espectro Autista (TEA) [1,2] a menudo experimentan hipersensibilidades sensoriales, lo que significa que sus sentidos pueden estar más agudizados o sensibles en comparación con las personas que no tienen este trastorno [3]. Una de las áreas en las que esto es común es la hipersensibilidad al sonido.
@@ -98,16 +98,15 @@ Sin financiación
 12	Política de Publicación 
 Se hace constar el deseo expreso del promotor y los investigadores de hacer públicos los resultados del estudio.
 
-----
 
-- **Clarifications**:
------
+### Output
+
 1. Por favor, especificad el período de tiempo sobre el que se va a realizar la revisión de historias clínicas (por ejemplo, se revisarán los pacientes entre 2021 y 2022). Recordad que el período debe ser totalmente retrospectivo.
 
 2. Por favor, indicad si los datos se van a guardar en alguna base de datos y si es así, dónde se almacenará la base de datos (se recomienda onedrive corporativo o del Hospital) y quién tendrá acceso a la misma.
 
 3. En el protocolo se indica que se solicitará consentimiento informado a los progenitores pero no se adjunta. Por favor, adjuntad el consentimiento informado para su revisión.
------
+
 
 ## Tools
 
@@ -145,7 +144,9 @@ The documents are classified into 2 groups:
    - Research projects
 3. Clarification:
 
-The document name indicates the type of study. All files contain a number HCBXXXXX.Y, the part HCBXXXX is used to link clarifications with the study that must match, whereas .Y refers to whether it corresponds to the first version of the file (.1 or .h1) or once the clarifications have been made (.2 or .h2), for example HCB20240123.2: the number that relates them is HCB20240123 and indicates that it is after the clarifications.
+The document name indicates the type of study. All files contain a HCBXXXXX.Y number, the HCBXXXX part is used to link clarifications with the study that must match, whereas .Y refers to whether it corresponds to the first version of the file (.1 or .h1) or (.2 or .h2) once the clarifications have been made. 
+
+For instance, HCB20240123.2: the number that links them is HCB20240123, and it is stated that there has been a  clarification.
 
 NOTE: If a study only has .2 or .h2, this means that it has no clarifications.
 
@@ -194,6 +195,7 @@ BUCKET_FILE_LOCATION_AND_NAME = '<group_name>/<challenge_name>/<file_name>'
 | Completeness       | Includes all relevant patient data.     | Includes key data, missing some secondary details.     | Incomplete information, missing critical details.     | Insufficient information for an adequate clinical assessment. |
 | Language Clarity       | Language is clear and understandable for any medical reader.     | Understandable, but with some ambiguous terms.     | Several ambiguous terms or clarity issues.     | Confusing language that impedes understanding. |
 | Information Relevance       | All information is relevant for diagnosis and treatment.     | Mostly relevant, with some marginal data.     | Partially relevant or disorganized information.     | Irrelevant or disorganized information that confuses. |
+
 
 
 

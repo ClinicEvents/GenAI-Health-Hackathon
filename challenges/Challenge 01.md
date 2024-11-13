@@ -10,10 +10,8 @@ Generate a report for the patient and other physicians based on previous clinica
 
 ## Expected Outcomes
 
-The report must contain the following:
+Pain medical history report must contain the following:
 
-**Key Concepts for Pain Medical History:**
-________________________________________
 1. Demographic and Socioeconomic Data:
 	- Age: Crucial, as age affects pain presentation and management (older adults, children, adolescents).
 	- Sex: Influences prevalence and presentation. Record sex assigned at birth and gender.
@@ -22,7 +20,7 @@ ________________________________________
 	- Marital Status/Social Support: Influences support network. Detail family composition and available support.
 	- Socioeconomic Level: Affects access to resources. Include information on income, insurance, and barriers to access.
 	- Cultural Background/Beliefs about Pain: Influences pain perception and expression. Record ethnicity, religion, and specific beliefs regarding the cause and meaning of pain.
-________________________________________
+
 2. Pain Characteristics:
 	- Location: Anatomical precision. Use body diagrams. Document if localized or diffuse.
 	- Radiation: Pathway. Differentiate between radicular and referred pain.
@@ -34,7 +32,7 @@ ________________________________________
 	- Aggravating Factors: Movements, postures, stress, food, weather, etc.
 	- Alleviating Factors: Rest, heat, cold, medications, distraction, etc.
 	- Associated Symptoms: Nausea, vomiting, dizziness, sleep disturbances, anxiety, depression, fatigue, numbness, tingling, weakness, stiffness, etc. Detail the nature and severity of each symptom.
-________________________________________
+
 3. Diagnoses:
 	- Primary Diagnoses: Main condition according to IASP and/or ICD-11. Examples:
 		- Chronic Primary Pain:
@@ -60,7 +58,7 @@ ________________________________________
 	- Secondary Diagnoses: Comorbidities that contribute to pain. Examples: Depression, anxiety, sleep disorders, substance abuse, somatoform disorders, comorbid medical conditions (e.g., diabetes, hypertension, heart disease, lung disease, kidney disease, liver disease, arthritis, cancer).
 	- Pain Classification (IASP): Nociceptive, neuropathic, nociplastic, mixed. Specify pain pathophysiology. Examples: Somatic nociceptive pain, visceral nociceptive pain, peripheral neuropathic pain, central neuropathic pain, nociplastic pain.
 	- Diagnoses according to DSM-5/ICD-11: Include mental or behavioral disorder diagnoses. Examples: Major depressive disorder, generalized anxiety disorder, post-traumatic stress disorder, panic disorder, obsessive-compulsive disorder, substance use disorder, sleep disorders.
-________________________________________
+
 4. Treatments:
 	- Pharmacological:
 		- Non-Opioid Analgesics (NSAIDs): Name, dose, frequency, duration, side effects, interactions.
@@ -77,20 +75,20 @@ ________________________________________
 		- Implantable Devices: Type (e.g., spinal cord stimulator, dorsal root ganglion stimulator), implantation date, programming, effectiveness.
 		- TENS/PENS: Stimulation parameters, usage frequency, effectiveness.
 		- Self-Care: Patient strategies. Detail activities (e.g., exercise, stretching, heat/cold application, relaxation techniques), frequency, effectiveness.
-________________________________________
+
 5. Functional Assessment:
 	- Activities of Daily Living (ADL): Standardized scales or questionnaires (e.g., Barthel Index). Specify activities affected.
 	- Instrumental Activities of Daily Living (IADL): Standardized scales or questionnaires (e.g., Lawton and Brody Scale). Specify activities affected.
 	- Impact on Work, Relationships, and Leisure: Use validated scales (e.g., Brief Pain Inventory - BPI, WHODAS 2.0). Describe specific impact on each area.
 	- Functional Assessment Scales: Examples: Oswestry Disability Index (ODI) for low back pain, Roland Morris Disability Questionnaire (RMDQ) for low back pain, McGill Pain Questionnaire (MPQ), Neck Disability Index (NDI) for cervical pain.
-________________________________________
+
 6. Medical History:
 	- Medical Conditions: Detail diagnoses, treatments, and management. Include information on chronic illnesses such as diabetes, hypertension, heart disease, lung disease, kidney disease, liver disease, autoimmune diseases, neurological disorders.
 	- Allergies: Specify allergen and type of allergic reaction.
 	- Substance Abuse History: Type of substance, frequency, duration, previous treatments. Use validated screening tools.
 	- Psychiatric History: Diagnoses, treatments, current status. Include mood disorders, anxiety disorders, sleep disorders, personality disorders.
 	- Surgical History: Type of surgery, date, outcomes, complications.
-________________________________________
+
 7. Psychosocial Assessment:
 	- Mood: Use validated scales (e.g., HADS, BDI, PHQ-9). Describe the patient's mood (e.g., depressed, anxious, irritable, apathetic).
 	- Social Support: Quantify and qualify available social support. Identify support sources (e.g., family, friends, support groups).
@@ -98,7 +96,7 @@ ________________________________________
 	- Treatment Expectations: Realistic vs. unrealistic. Negotiate therapeutic goals.
 	- Beliefs about Pain (Catastrophizing, Kinesiophobia, etc.): Use specific questionnaires (e.g., Pain Catastrophizing Scale - PCS, Tampa Scale of Kinesiophobia - TSK).
 	- Impact of Pain on Quality of Life: Use validated scales (e.g., SF-36, EQ-5D). Describe how pain affects different quality of life areas (e.g., physical, emotional, social).
-________________________________________
+
 8. Other:
 	- Laboratory Tests: Include values, dates, and type of test (e.g., complete blood count, erythrocyte sedimentation rate, C-reactive protein).
 	- Imaging Studies: Include reports, dates, and type of study (e.g., X-rays, MRI, CT scan).

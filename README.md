@@ -9,11 +9,11 @@ This document is divided in the following sections:
     3. AWS environment
 
 
-**IMPORTANT: Read carefully all of this document.**
+**IMPORTANT: Please read this document carefully.**
 
 ## 1. Event rules
 All participants in this event must comply with the following conditions:
-- All of the challenge development must be done using AWS services. The available services are:
+- The development of the challenge  must be done using AWS services. The available services are:
     - S3
     - Bedrock 
     - Kendra
@@ -23,28 +23,28 @@ NOTE: You can employ libraries like [LangChain](https://www.langchain.com/) in J
 
 - It is **NOT** allowed to extract/move information outside of the locations specified in the challenge files.
 
-- The challenge will only be accepted if the participants save ALL the needed files to replicate the provided answer by the group members.
+- The challenge will only be accepted if the participants save ALL the needed files to replicate the provided solution.
 
 ## 2. Git content
 
 - *Challenges* (folder): contains the documentation for every challenge. These are the assigned challenges to each group:
 
 
-|TEAM | CHALLENGE | DESCRIPTION|
+|TEAM | CHALLENGE | TITLE |
 |:-:|:-:|---|
-0|17|Extracting relevant entities from Unstructured Data from Hospital Discharge Summaries to Predict Readmission and Mortality Risks in Transitional Care
-1|24|Relevant entities extraction from Psychiatry clinical reports
-2|1|Adapted Patient Pain History Summary for EGective Communication
-3|29|Hospital Clinic Web ChatBot
-4|9|Personalized Delivery of Educational Tips for Prehabilitation Patients
+0|17| Non-structured data extraction from release reports to predict re-admission risk and death during the transactional attention
+1|24|Optimizing Psychiatric Diagnosis and Patient Profiling through AI-Driven Textual Data Extraction and Analysis
+2|1|Clinical History of Pain
+3|29|Chatbot for Hospital Clinic website
+4|9| Personalized Delivery of Nutrition Tips for Prehabilitation Patients
 5|15|Large Language Models in the Prediction of Malignant Cerebral Infarction
-6|23|Febrile Neutropenia Blood test request suitability prediction
-7|10|Evaluation of pharmacotherapy adequacy
-8|18|MediRol. Medical evaluation LLM instructor
-9|31|Clinical Trial patient match
-10|27|Endoscopy request Suitability (endoscopy request triage)
+6|23|Diagnostic Management of Infection in Febrile Neutropenia Patients
+7|10|LLM comparison against ontologies for the patient's safety improvement with medication use
+8|18|AI-guided Virtual Medical Simulation (MediRol)
+9|31|Optimizing Precision Oncology in the Clinic Comprehensive Cancer Center with Generative AI (OPERA Project)
+10|27|Evaluation of LLM Performance in Assessing the Appropriateness of Outpatient Colonoscopy Requests According to Current Guidelines
 11|33|IRB Screening Agent
-12|28|Natural Language DataNex (data warehouse) Querying
+12|28|Querying a database using natural language
 
 2. *Demos* (folder): contains tutorials to help the participants to develop the assigned challenge in AWS environment. Each challenge specifies the demos that can be used.
 
