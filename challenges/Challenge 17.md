@@ -36,7 +36,7 @@ Participants will have the following information/tools to complete the challenge
 ### Database
       
 The databases that make up this challenge are:
-- BASE17. Contains:
+- [BASE17](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE17/&showversions=false) contains:
     - DAT17_01: Free text document: Discharge report
     -	DAT17_02: Demographic data (DEMO)
     -	DAT17_03: Socioeconomic data (SOCIOECONOMICOS)

@@ -72,7 +72,7 @@ Below are details of the most relevant aspects of the tools available to partici
 ### Database
 The databases that make up this challenge are:
 
-- BASE23. Contains:
+- [BASE23](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE23/&showversions=false) contains:
  	 -	DAT23_01: Free text document: Admission reports
  	 -	DAT23_02: Laboratory data (LAB)
  	 -	DAT23_03: Demographic data (DEMO)

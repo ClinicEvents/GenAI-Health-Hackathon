@@ -44,7 +44,7 @@ Below are details of the most relevant aspects of the tools available to partici
 
 The databases that make up this challenge are:
 
-- BASE30. Contains:
+- [BASE30](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE30/&showversions=false) contains:
   -	DAT30_01: Clinical course
   -	DAT30_02: Demographic data (DEMO)
   -	DAT30_03: Socioeconomic data (SOCIOECONOMICOS)

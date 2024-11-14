@@ -135,7 +135,7 @@ Below are details of the most relevant aspects of the tools available to partici
 
 ### Database
 
-The documents are classified into 2 groups:
+[BASE33](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE33/&showversions=false) documents are classified into 2 groups:
 
 1. Studies:
    - Retrospective studies

@@ -44,7 +44,7 @@ Below are details of the most relevant aspects of the tools available to partici
  
 The databases that make up this challenge are:
 
-- BASE19. Contains:
+- [BASE19](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE19/&showversions=false) contains:
   	-	DAT19_01: Free text document: Emergency discharge report
  	 -	DAT19_02: Free text document: Hospital admission report
  	 -	DAT19_03: Free text document: Transport

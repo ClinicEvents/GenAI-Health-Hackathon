@@ -52,8 +52,8 @@ Participants will have the following information/tools to complete the challenge
 Below are details of the most relevant aspects of the tools available to participants.
 
  ### Database
- 
-*** REVISAR BUCKET CLINIC ***
+ [BASE18](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE18/&showversions=false). Your mentor will provide you with more details about the information that contains this database.
+
 
 
 

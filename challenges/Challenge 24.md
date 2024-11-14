@@ -155,7 +155,7 @@ Below are details of the most relevant aspects of the tools available to partici
  
 
 The databases that make up this challenge are:
-- BASE24. Contains:
+- [BASE24](https://us-west-2.console.aws.amazon.com/s3/buckets/data-clinic-hackathon-2024?region=us-west-2&bucketType=general&prefix=BASE24/&showversions=false) contains:
 	- DAT24_01: Free text document: Discharge report
 	- DAT24_02: Free text document: Emergency discharge report
 	- DAT24_03: Free text document: Evolution report
