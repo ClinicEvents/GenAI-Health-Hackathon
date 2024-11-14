@@ -63,6 +63,7 @@ SAP Dataset Clinic (BASE10)
 - 100 clinical cases that may contain potentially inappropriate prescriptions
 - OntoPharma obtained results. Patient's safety results for medication use will previously be obtained from a test environment (SAP-QAS) and reflected in a file to compare them to LLM results.
 
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
 
 ### Shared bucket
 
