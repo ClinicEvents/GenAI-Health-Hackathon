@@ -195,6 +195,8 @@ The types of reports that we may encounter are:
 | IR_PSI_CLIN      | Neuropsychologycal report, psychometry  |
 | IR_PSI_TEC      | TEC reports  |
 
+**NOTE:** If a patient is not found, the k-anonimization has deleted it.
+
 In the free-text reports the file name is always structured as follows:
 
 {challenge_number} _{challenge_identifier_number} _{report_type} _{id_patient_pseu} _{creation_date} _{counter}.txt
