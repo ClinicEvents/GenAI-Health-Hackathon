@@ -103,6 +103,7 @@ C. LABORATORIO:
 | id_patient_pseu      | Patient identification number that links the patients between tables    |
 | id_epis_pseu      | Episode identification number  |
 
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
 
 D. FREE TEXT DOCUMENTS
 
