@@ -84,6 +84,8 @@ https://www.clinicbarcelona.org/
 
 The chatbot has to use only "Assistance and health" section of the web page.
 
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
+
 
 ### Shared bucket
 
