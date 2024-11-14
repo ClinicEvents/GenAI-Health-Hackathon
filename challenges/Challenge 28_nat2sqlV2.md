@@ -341,6 +341,7 @@ SELECT
 FROM
   episode_pairs
 ORDER BY
+  patient_ref, episode1, episode2;
 ```
 
 - Query 2
