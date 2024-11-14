@@ -46,6 +46,8 @@ Participants will have the following information/tools to complete the challenge
     - DEMO_s3_read_file
     - DEMO_s3_write_file
 
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
+
 
 **All development must be carried out using the services available on AWS. Moving information outside of the specified tools is NOT allowed.**
 
