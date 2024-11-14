@@ -75,6 +75,8 @@ B. SOCIECONOMICOS
 
 *NOTE: Check Dictionaries file for the description of the value
 
+**NOTE:** If a patient is not found, the k-anonimization has deleted it.
+
 C. Free text documents
 
 The types of reports that we may encounter are:
