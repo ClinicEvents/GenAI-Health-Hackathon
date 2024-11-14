@@ -85,7 +85,7 @@ B. SOCIECONOMICOS
 
 *NOTE: Check Dictionaries file for the description of the value
 
-
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
 
 C. FREE TEXT DOCUMENTS
 
