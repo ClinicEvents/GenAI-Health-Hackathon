@@ -112,6 +112,8 @@ Below are details of the most relevant aspects of the tools available to partici
 
 This section details the available tables (views) and their attributes.
 
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
+
 #### VIEW: demo_events
 
 Defines patient's attributes. Contains demographic information about the patient.

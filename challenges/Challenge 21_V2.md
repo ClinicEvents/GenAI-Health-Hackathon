@@ -233,13 +233,14 @@ A. DEMO
 | Sex      | Patient's sex, 1 for male, 2 for female, 3 for other      |
 | Birth_date      | Patient's birth date     |
 | Civil_status      | Patient's marital status      |
-| Natio      | place of residence, nation_dic.txt file      |
-| Idiom      | Patient's language   |
-| Zip_code      | Postal code      |
+| Natio      | place of residence, ES: Spanish, OT: Other     |
+| Idiom      | Patient's language, ES: Spanish, OT: Other    |
 | Health_area      | Health area       |
-| Employment_situation      | Employment situation       |
-| Contact      | Contact person     |
+| Employment_situation*      | Employment status       |
+| Contact*      | Contact person     |
 | id_patient_pseu      | Patient identification number that links the patients between tables      |
+
+*NOTE: Check Dictionaries file for the description of the value
 
 B. SOCIECONOMICOS
 
@@ -247,10 +248,14 @@ B. SOCIECONOMICOS
 | ----------- | ----------- |
 | register_date      | Register date     |
 | register_time      | Register time     |
-| situ_lab      | Employment status     |
-| vive_con      | Co-habitation status. Alone, with family, shared home.   |
+| situ_lab*      | Employment status     |
+| vive_con*      | Co-habitation status. Alone, with family, shared home.   |
 | cuida_nomb      | Name of the care giver       |
 | id_patient_pseu      | Patient identification number that links the patients between tables       |
+
+*NOTE: Check Dictionaries file for the description of the value
+
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
 
 C. FREE TEXT DOCUMENTS
 

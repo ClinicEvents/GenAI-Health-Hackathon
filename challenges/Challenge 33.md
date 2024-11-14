@@ -128,6 +128,7 @@ Participants will have the following information/tools to complete the challenge
     - DEMO_s3_read_file
     - DEMO_s3_write_file
 
+**NOTE:** If a patient is not found in the databases, the k-anonimization has deleted it.
 
 **All development must be carried out using the services available on AWS. Moving information outside of the specified tools is NOT allowed.**
 
@@ -149,6 +150,7 @@ The document name indicates the type of study. All files contain a HCBXXXXX.Y nu
 For instance, HCB20240123.2: the number that links them is HCB20240123, and it is stated that there has been a  clarification.
 
 NOTE: If a study only has .2 or .h2, this means that it has no clarifications.
+
 
 
 ### Shared bucket
